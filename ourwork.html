@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work</title>
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 400vh;
+    background-color: #f4f4f4;
+	 scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;
+     
+}
+
+//.logo {
+
+ //background-color: white; 
+   // width: 5cm; 
+    //height: 1.5cm; 
+    //display: flex; 
+    //align-items: center; 
+    //justify-content: center;    
+//}
+
+.logo span {
+    color: #ffffff;
+}
+.logo img {
+            
+            width: 190px;
+            height: auto;
+        }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+padding-left:-10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.promo-container {
+    position: relative;
+	top:10px;
+	left:70px;
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 90%;
+    max-width: 1800px;
+	height: 540px; /* Set a fixed height */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.promo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container without distortion */
+    display: block;
+	 animation: zoomIn 1.5s ease forwards;
+}
+
+.promo-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.promo-content h1 {
+ font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+	font-weight: 600;
+	 font-style: italic;
+	 animation: fadeInUp 1.5s ease-out 0.5s forwards; /* Slide-up with delay */
+    opacity: 0; /* Start hidden */
+}
+
+
+
+.promo-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+	animation: fadeIn 1.5s ease-out 1s forwards; /* Fade-in with delay */
+    opacity: 0;
+}
+
+.promo-button:hover {
+    background-color: #333;
+    color: white;
+}
+.portfolio-container {
+position: relative;
+top:100px;
+ height: 170vh;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0 auto; /* Center the container horizontally */
+	   opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.portfolio-container.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.portfolio-header p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #c1c1c1;
+}
+
+.portfolio-nav {
+    margin-top: 20px;
+}
+
+.portfolio-nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #c1c1c1;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-nav a:hover,
+.portfolio-nav a.active {
+    color: #f4f4f4;
+    border-color: #f4f4f4;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.grid-item:nth-child(1) {
+ position:relative;
+ left:35px;
+    height: auto;
+	width: 550px;
+}
+
+.grid-item:nth-child(2) {
+    position:absolute;
+    height: 355px;
+		width: 550px;
+		left:650px;
+		top:137px;
+		
+}
+
+
+.portfolio{
+position: relative;
+top:120px;
+ height: 170vh;
+
+	left:70px;
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 90%;
+    max-width: 1800px;
+	height: 550px; /* Set a fixed height */
+    border-radius: 20px;
+    overflow: hidden;
+   
+}
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    
+}
+.portfolio-container2{
+position: relative;
+top:90px;
+ height: 170vh;
+
+}
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #bbb;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+.portfolio2{
+position: relative;
+top:10px;
+ height: 170vh;
+  width: 100%;
+   
+	left:70px;
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ 
+    max-width: 2000px;
+	height: 550px; /* Set a fixed height */
+    border-radius: 20px;
+    overflow: hidden;
+   
+}
+.portfolio2 img {
+
+    width: 100%;
+    height: 100%;
+    
+}
+/* Parallax effect on the portfolio section */
+.parallax {
+    position: relative;
+    height: 550px;
+    background-image: url('banner.PNG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* Ensure images inside the portfolio are styled correctly */
+.portfolio-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.portfolio-container3 {
+position: absolute;
+top:620%;
+
+ height: 170vh;
+    width: 100%;
+    max-width: 1309px;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0 auto; /* Center the container horizontally */
+	   
+}
+ .grid-container {
+ position:absolute;
+ top:940%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.image-card img {
+    width: 100%;  /* By default, all images take up full width */
+    object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+}
+
+/* Card-specific image sizes */
+.card1 img {
+    width: 80%;  /* Image in card1 is 80% of its container's width */
+    height: 250px; /* Fixed height for image 1 */
+}
+
+.card2 img {
+    width: 90%;  /* Image in card2 is 90% of its container's width */
+    height: 300px; /* Taller image */
+}
+
+.card3 img {
+    width: 100%;  /* Image in card3 takes full width */
+    height: 220px; /* Smaller image */
+}
+
+.card4 img {
+    width: 70%;  /* Smaller width for image 4 */
+    height: 200px; /* Fixed height */
+}
+
+.card5 img {
+    width: 85%;  /* Image 5 width */
+    height: 280px; /* Fixed height for image 5 */
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    width: 100%;  /* Control the width of the text section */
+    height: auto;  /* Makes the text section adapt its height */
+}
+
+.image1 {
+position: relative; 
+    top: -10%;
+    left: 0;
+   
+}
+.image2 {
+    position: relative; 
+    top: -16%;
+    left: 0;
+}
+.image3 {
+     position: relative; 
+    top: -10%;
+    left: 0;
+}
+.image-1 img {
+width:500px;
+   height:auto;
+   border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-2 img {
+   
+}
+
+.image-3 img {
+ width:600px;
+   height:300px;
+}
+.image-4 img {
+   width:600px;
+   height:300;
+}
+
+.image-5 img {
+ position: relative; 
+top:115px;
+ width:600px;
+   height:auto;
+   border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.picture-card {
+width:500px;
+   height:auto;
+}
+/* Contact Section */
+.contact-section {
+position:relative;
+top:1900px;
+      background-color: #1e1e1e;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-section h1 {
+    font-size: 4em;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contact-section h1 span {
+    font-size: 1.5em;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-section h1:hover {
+    color: #000;
+}
+
+.contact-section h1:hover span {
+    transform: translateX(10px);
+}
+
+/* Footer */
+footer {
+position:relative;
+top:1900px;
+      background-color: #1e1e1e;
+    color:white;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    max-width: 30%;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.location-info p {
+    margin: 5px 0;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-right ul li {
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-right ul li a:hover {
+    color: #fff;
+}
+/* Media Query for Screens 768px and Smaller */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align the content */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-left,
+    .footer-right {
+        max-width: 100%; /* Ensure full width on mobile */
+    }
+
+    .footer-logo img {
+        width: 120px; /* Further reduce logo size on smaller screens */
+    }
+
+    .footer-right ul li {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
+.heading {
+position:relative;
+top:1800px;
+    text-align: center;
+    font-size: 3.0em;
+    letter-spacing: 2px;
+    padding: 40px;
+    color: black;
+	 font-family: Raleway;
+  
+}
+
+.gallery-image {
+position:relative;
+top:1800px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  height: 250px;
+  width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+.img-box img {
+  width: 100%;       /* Make the image width match the container width */
+  height: 100%;      /* Make the image height match the container height */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+.gallery-image2{
+
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery-image3{
+
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-box2 img {
+  width: 100%;       /* Make the image width match the container width */
+  height: 100%;      /* Make the image height match the container height */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+.img-box2 {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box2:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box2:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box2:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box2:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+  </style>
+</head>
+<body>
+<header>
+        <div class="logo"> <img src="Logoblack.png" alt="Logo">
+		</div>
+		
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="team.html">TEAM</a></li>
+				<li><a href="ourwork.html">OUR WORK</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <div class="promo-container">
+        <img src="space.jpg" alt="Skin Care Image" class="promo-image">
+        <div class="promo-content">
+            <h1>The Power of Creativity <br>& Innovation</h1>
+            <a class="promo-button" id="view-work">View our latest Work</a>
+        </div>
+    </div>
+	<div class="portfolio-container">
+    <div class="portfolio-header">
+        <h1>Exhibition solutions</h1>
+        <p>Our expertise is the cornerstone of our success. With years of experience in web design, development, and branding, we've honed our skills to perfection.</p>
+        
+    </div>
+    <div class="portfolio-grid">
+        <div class="grid-item">
+            <img src="ex4.jpg" alt="Image 1">
+        </div>
+		 
+        <div class="grid-item">
+            <img src="haw.png" alt="Image 2">
+        </div>
+        
+    </div>
+	 <div class="gallery-image3">
+    <div class="img-box2">
+      <img src="ex3.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="ex5.PNG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+       
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="ex6.PNG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="ex2.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="ex7.JPG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="ex8.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="portfolio parallax">
+    <div class="portfolio-images">
+        <img src="banner.PNG" alt="Image">
+    </div>
+</div>
+
+		<div class="portfolio-container2">
+    
+   <div class="container">
+    <div class="portfolio-header">
+        <h2>Company
+Branding Solutions</h2>
+		</div>
+      
+        <div class="image-grid">
+            <img src="brandings.jpg" alt="Person with orange glasses">
+            <img src="smirnoff.png" alt="Decorated car">
+        </div>
+    </div>
+	
+	 	<div class="gallery-image2">
+    <div class="img-box2">
+      <img src="brand2.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="brand.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="smir4.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="brand8.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="brand3.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="brand4.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div> 
+    </div>
+	<div class="img-box2">
+      <img src="brand5.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+       
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="brand6.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+       
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="brand7.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+  </div>
+
+	
+
+	 
+       
+</div>
+<div class="portfolio-container3">
+    <div class="portfolio-header">
+        <h1>PHOTOGRAPHY & AV SERVICES</h1>
+       
+      
+    </div>
+   <div class="gallery-image2">
+    <div class="img-box2">
+      <img src="p5.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="p2.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="p1.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div>
+    </div>
+    <div class="img-box2">
+      <img src="P2.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+      
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="portfolio.JPG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="P3.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div> 
+    </div>
+	<div class="img-box2">
+      <img src="p6.JPG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="p8.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box2">
+      <img src="p7.JPG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+  </div>
+
+	
+</div>
+
+
+
+<p class="heading">Retail Solutions</p>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="ReLax & REcharge express2.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="ReLax & REcharge express6.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="ReLax & REcharge express1.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="ReLax & REcharge express5.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="ReLax & REcharge express4.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="Relax and Recharge logo.pdf.PNG" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+        
+        </div>
+      </div> 
+    </div>
+  </div>
+
+   
+	    <div class="contact-section">
+    <p>We would love to hear from you and collaborate on something that builds the world.</p>
+    <h1>Let's Talk <span>&#x2197;</span></h1>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="contact-info">
+                <p>Email:info@onbrandmarketing.co.za </p>
+                <p>Phone: 011 943 1522<br>
+083 429 7361<br>
+072 545 5855</p>
+            </div>
+            <div class="location-info">
+                <p>Location: <br>
+                    1 Jones Road, Kempton Park,
+ <br>
+                    Johannesburg, 1632 
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+              
+                <li><a href="services.html">Service</a></li>
+
+                <li><a href="ourwork.html">Works</a></li>
+                
+              
+                
+       
+                
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+ document.getElementById('view-work').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('portfolio').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+document.addEventListener("DOMContentLoaded", function () {
+    const portfolioContainers = document.querySelectorAll(".portfolio-container, .portfolio-container3");
+    const gridItems = document.querySelectorAll(".portfolio-grid .grid-item");
+
+    function checkInView() {
+        portfolioContainers.forEach(container => {
+            const rect = container.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                container.classList.add("in-view");
+
+                // Add 'in-view' class to each grid item for staggered effect
+                gridItems.forEach((item) => {
+                    item.classList.add("in-view");
+                });
+            }
+        });
+    }
+
+    // Run the function on page load and scroll
+    checkInView();
+    window.addEventListener("scroll", checkInView);
+});
+
+</script>
+</body>
+</html>

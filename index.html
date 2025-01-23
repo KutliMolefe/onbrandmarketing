@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <title>On Brand</title>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+overflow-x: hidden;
+}
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on mobile devices */
+    }
+	}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+     background-color:#1A1A1A ;
+}
+
+
+
+.logo span {
+    color: #ffffff;
+}
+.logo img {
+            
+            width: 200px;
+            height: auto;
+        }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+padding-left:-10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+ .Firstcontainer {
+		 display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: #1A1A1A;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars from appearing during animations */
+          z-index: 2;
+          
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            transition: transform 1s ease; /* Add transition for scaling */
+            position: relative;
+			z-index: 2;
+        }
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 8px #b5cd34,
+            0 0 20px #b5cd34,
+            0 0 40px #b5cd34,
+            0 0 80px #b5cd34,
+            0 0 120px #b5cd34;
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        opacity: 0.8;
+    }
+}
+
+@keyframes neon-flicker {
+    0%, 80% {
+        opacity: 1;
+        box-shadow: 0 0 20px #b5cd34, 0 0 40px #b5cd34, 0 0 60px #b5cd34;
+    }
+    81%, 84% {
+        opacity: 0.9;
+        box-shadow: none;
+    }
+    85%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 20px #b5cd34, 0 0 40px #b5cd34, 0 0 60px #b5cd34;
+    }
+}
+        .toggle-switch {
+            width: 170px;
+            height: 100px;
+            background-color: #b5cd34;
+            border-radius: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+             opacity: 1;
+			
+			 animation-delay: 0.7s;
+			 transition: background-color 1.3s ease;
+        }
+
+        .circle {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            transition: left 1.5s ease;
+        }
+
+        .n-text {
+            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: #b5cd34;
+            margin-left: 5px;
+            
+			
+        }
+
+        .brand-text {
+            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: white;
+            margin-left: 13px;
+           
+			z-index: 2;
+        }
+
+        .welcome-text, .marketing-text {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+			z-index: 2;
+        }
+
+        .welcome-text {
+            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: white;
+			top:200px;
+            left: 395px; /* Initial position off the screen to the left */
+        }
+
+        .marketing-text {
+           font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+			 font-style: italic;
+            color: white;
+			top:410px;
+            right: 400px; /* Initial position off the screen to the right */
+        }
+
+        .on .toggle-switch {
+            background-color: #b5cd34;
+        }
+
+        .on .circle {
+            left: 85px;
+        }
+
+        .on .n-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .on .brand-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+       
+
+        .show-welcome {
+            opacity: 1;
+      
+        }
+
+        .show-marketing {
+            opacity: 1;
+     
+        }
+
+		.aboutuscontainer {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+	height:200px;
+    padding: 30px;
+    background: #1A1A1A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 2);
+}
+
+.aboutuscircle {
+    width: 200px;
+    height: 200px;
+    background: url('On.png');
+    border-radius: 50%;
+    background-size: cover;
+    float: left;
+    shape-outside: circle();
+    margin: 30px 30px 30px 0;
+}
+
+.custom-paragraph {
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    text-align: justify;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+.viewourworkcontainers {
+position: relative;
+margin-top: 350px;
+left:6%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+
+    background-color: white;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limit the height for larger screens */
+    object-fit: cover;
+}
+
+.portfolio-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-section h1 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-section h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #888888;
+    margin-bottom: 30px;
+}
+
+.portfolio-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+.button {
+    width: 128px;
+    padding: 15px 30px;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+.ourservicescontainer {
+ position: relative;
+    margin-top: 50px;
+left:13%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    max-width: 1000px;
+    justify-items: center;
+    align-items: center;
+}
+
+.Servcircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	margin: 20px;
+}
+
+.circle-border {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(145deg, #8dc63f, #f9e300); /* Default gradient */
+}
+
+.Servcircle:nth-child(2) .circle-border {
+    background: linear-gradient(145deg, #00bfae, #0072bc);
+}
+
+.Servcircle:nth-child(3) .circle-border {
+    background: linear-gradient(145deg, #ed1c24, #f36f21);
+}
+
+.Servcircle:nth-child(4) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #f36f21);
+}
+
+.Servcircle:nth-child(5) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #8dc63f);
+}
+
+.Servcircle:nth-child(6) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #3d8f36);
+}
+
+.inner-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.serv-paragraph {
+    font-size: 17px;
+    margin: 0;
+}
+h2 {
+    position: relative;
+    margin-top: 60px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h2, .featured-clients {
+    margin-bottom: 40px; /* Consistent spacing between sections */
+}
+
+.featured-clients {
+    position: relative;
+    margin-top: 50px; /* Reduce large margin */
+    left: 0; /* Reset left to avoid side movement */
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+
+
+.featured-clients h3 {
+    font-size: 1.2em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.featured-clients h4 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.featured-clients h4:after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #00aaff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.featured-clients p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6em;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+
+
+.clients-logos img {
+    max-height: auto;
+    width: 870px;
+    filter: grayscale(100%);
+    
+}
+.contact-container {
+		
+		background-color: #f8f8f8;
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+	height: 550px;
+}
+.contact-form {
+
+    flex: 1;
+    padding: 50px;
+    background-color: #f7f7f7;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-info p strong {
+    color: #333;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #703845;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ec971f;
+}
+
+
+
+.contact-image {
+    flex: 1;
+    background-color: #e0e0e0;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Footer */
+        footer {
+		
+            background-color: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer-columns .column {
+            width: 20%;
+        }
+
+        .footer-columns ul {
+            list-style: none;
+        }
+
+        .footer-columns a {
+            color: white;
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="logo.png" alt="Logo">
+		</div>
+		
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="team.html">TEAM</a></li>
+				<li><a href="ourwork.html">OUR WORK</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+	 <div class="Firstcontainer">
+        <div class="welcome-text">WELCOME TO</div>
+        <div class="logo-container">
+            <div class="toggle-switch">
+                <div class="circle"></div>
+            </div>
+            <div class="n-text">N</div>
+            <div class="brand-text">BRAND</div>
+        </div>
+        <div class="marketing-text">MARKETING AGENCY</div>
+		
+    </div>
+	<div class="aboutuscontainer">
+  <div class="aboutuscircle"></div>
+  <h1>About Us</h1>
+  <p class="custom-paragraph">
+  Marketing Communications is a boutique agency founded by Violet Moatshe who is a Brand Marketing Maven with an entrepreneurial spirit, fueled by her passion for developing and growing brands. This has resulted in the birth and growth of On Brand Marketing Communications.
+
+We support brands in delivering on their promises, staying true to their essence and investing in sustainable practices and people.
+
+We believe that A promise made + A promise delivered = A credible, valuable & successful brand.
+</p>
+
+</div>
+<div class="viewourworkcontainers">
+        <div class="image-section">
+            <img src="businesscard.jpeg" alt="Creative Desk">
+        </div>
+        <div class="portfolio-section">
+            <h1>Creative <br>& fresh</h1>
+            <h3>Our marketing communications agency</h3>
+            <p>
+                At On Brand, we are a proudly successful brand marketing communication agency  specialising in crafting compelling marketing strategies that captivate audiences and drive results. Our team of experienced professionals combines creativity with data-driven insights to deliver impactful communications that resonate. Discover how we can help your brand stand out and succeed.
+            </p>
+            <a href="ourwork.html" class="button">View Our Work</a>
+        </div>
+    </div>
+	<h2>Our Offerings</h2>
+	<div class="ourservicescontainer">
+	
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="bulb.png" alt="Creative Design">
+                </div>
+            </div>
+            <p class="serv-paragraph">Creative Design <br>& Innovation</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon2.png" alt="Research and Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Research and <br>Development</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon3.png" alt="Strategy Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Strategy Development <br>& Implementation</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon4.png" alt="Brand Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Brand Development <br>& Management</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon5.png" alt="Audio Visuals">
+                </div>
+            </div>
+            <p class="serv-paragraph">Audio Visuals <br>& Photography</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon6.png" alt="Brand Activations">
+                </div>
+            </div>
+            <p class="serv-paragraph">Brand Activations <br>& Events</p>
+        </div>
+    </div>
+	<section class="featured-clients">
+        <h3>Our Featured Clients</h3>
+       
+        
+        <div class="clients-logos">
+            <img src="companylogo.png" >
+            
+        </div>
+    </section>
+	<div class="contact-container" id="contact">
+        <div class="contact-form">
+            <h2>Get in touch with us</h2>
+           
+            
+           <form action="send_mail.php" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" placeholder="Create a message here" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+           
+        </div>
+        <div class="contact-image">
+            <img src="Designer (1).jpeg" alt="Contact Image">
+        </div>
+    </div>
+	 <!-- Footer Section -->
+    <footer>
+        <div class="fouter-container">
+            <div class="footer-columns">
+                <div class="column">
+                    <h3>Contact Info</h3>
+                    <p>1 Jones Road, Kempton Park,Johannesburg, 1632</p>
+                    <p>Phone: 011 943 1522<br>
+083 429 7361<br>
+072 545 5855</p>
+                    <p>Email: info@onbrandmarketing.co.za</p>
+                </div>
+                <div class="column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2022 On Brand. All rights reserved.</p>
+        </div>
+    </footer>
+	<script>
+     window.onload = function() {
+            const logoContainer = document.querySelector('.logo-container');
+            const welcomeText = document.querySelector('.welcome-text');
+            const marketingText = document.querySelector('.marketing-text');
+			const imageSlide = document.querySelector('.image-slide');
+
+            // Start initial animation after 1 second
+            setTimeout(() => {
+			welcomeText.classList.add('show-welcome');
+                
+                
+                // Start shrink animation after an additional 2 seconds
+                setTimeout(() => {
+                     logoContainer.classList.add('on');
+                    
+                    // Show "Welcome to" after an additional 1 second
+                    setTimeout(() => {
+                         marketingText.classList.add('show-marketing');
+                        
+                        // Show "Marketing Communications" after an additional 1.5 seconds
+                        setTimeout(() => {
+                            marketingText.classList.add('show-marketing');
+							  imageSlide.classList.add('slide-in');
+                        }, 200);
+                    }, 500);
+                }, 0);
+            }, 500);
+        };
+		</script>
+	</body>
+	</html>

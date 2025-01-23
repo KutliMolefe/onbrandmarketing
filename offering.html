@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+body {
+    background-color: #1f1f2e;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ourservicescontainer {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    justify-items: center;
+    align-items: center;
+}
+
+.Servcircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -10px;
+    text-align: center;
+}
+
+.circle-border {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+.circle-border {
+    background: linear-gradient(145deg, #8dc63f, #f9e300); /* Default gradient */
+}
+.Servcircle:nth-child(2) .circle-border {
+    background: linear-gradient(145deg, #00bfae, #0072bc);
+}
+
+.Servcircle:nth-child(3) .circle-border {
+    background: linear-gradient(145deg, #ed1c24, #f36f21);
+}
+
+.Servcircle:nth-child(4) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #f36f21);
+}
+
+.Servcircle:nth-child(5) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #8dc63f);
+}
+
+.Servcircle:nth-child(6) .circle-border {
+    background: linear-gradient(145deg, #f9e300, #3d8f36);
+}
+
+.inner-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle img {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+}
+
+.serv-paragraph {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+	</style>
+</head>
+<body>
+    <div class="ourservicescontainer">
+        <div class="Servcircle">
+		<div class="circle-border">
+            <div class="inner-circle">
+                <img src="icon1.png" alt="Creative Design">
+            </div>
+			</div>
+            <p class="serv-paragraph">
+			Creative Design <br>& Innovation</p>
+        
+		</div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon2.png" alt="Research and Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Research and <br>Development</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon3.png" alt="Strategy Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Strategy Development <br>& Implementation</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon4.png" alt="Brand Development">
+                </div>
+            </div>
+            <p class="serv-paragraph">Brand Development <br>& Management</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon5.png" alt="Audio Visuals">
+                </div>
+            </div>
+            <p class="serv-paragraph" >Audio Visuals <br>& Photography</p>
+        </div>
+        <div class="Servcircle">
+            <div class="circle-border">
+                <div class="inner-circle">
+                    <img src="icon6.png" alt="Brand Activations">
+                </div>
+            </div>
+            <p class="serv-paragraph">Brand Activations <br>& Events</p>
+        </div>
+    </div>
+</body>
+</html>
