@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <title>On Brand</title>
+    <style>
+	body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;
+     background-color: #1e1e1e;
+}
+
+//.logo {
+
+ //background-color: white; 
+   // width: 5cm; 
+    //height: 1.5cm; 
+    //display: flex; 
+    //align-items: center; 
+    //justify-content: center;    
+//}
+
+.logo span {
+    color: #ffffff;
+}
+.logo img {
+            
+            width: 190px;
+            height: auto;
+        }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+padding-left:-10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.core-member-btn {
+    border: 2px solid #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.core-member-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    margin: 10px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    max-width: 250px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.info p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contact Section */
+.contact-section {
+      background-color: #1e1e1e;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-section h1 {
+    font-size: 4em;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contact-section h1 span {
+    font-size: 1.5em;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-section h1:hover {
+    color: #000;
+}
+
+.contact-section h1:hover span {
+    transform: translateX(10px);
+}
+
+/* Footer */
+footer {
+      background-color: #1e1e1e;
+    color:white;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    max-width: 30%;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.location-info p {
+    margin: 5px 0;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-right ul li {
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-right ul li a:hover {
+    color: #fff;
+}
+/* Media Query for Screens 768px and Smaller */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align the content */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-left,
+    .footer-right {
+        max-width: 100%; /* Ensure full width on mobile */
+    }
+
+    .footer-logo img {
+        width: 120px; /* Further reduce logo size on smaller screens */
+    }
+
+    .footer-right ul li {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+/* When the menu is active */
+.menu-active .menu-icon {
+    background: transparent;
+}
+
+.menu-active .menu-icon::before {
+    transform: rotate(45deg);
+}
+
+.menu-active .menu-icon::after {
+    transform: rotate(-45deg);
+}
+
+/* Show the menu when active */
+.menu-active nav {
+    display: block;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+
+    header {
+        padding: 12px 20px;
+    }
+    
+    nav {
+        display: none; /* Hide by default on mobile */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 20px;
+        width: calc(100% - 40px);
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+		  z-index: 100;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+    </style>
+</head>
+<body>
+  <header>
+        <div class="logo"> <img src="logo.png" alt="Logo">
+		</div>
+		<button class="menu-toggle" aria-label="Toggle menu">
+            <span class="menu-icon"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="team.html">TEAM</a></li>
+				<li><a href="ourwork.html">OUR WORK</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+<div class="container">
+        <div class="header">
+            <button class="core-member-btn">Core Member</button>
+            <h1>Meet the team</h1>
+            <p class="intro-text">Get to know the brilliant minds shaping the future of marketing at OnBrand. Our core members bring diverse expertise, creativity, and dedication to every project.</p>
+        </div>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="woman2.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Violet Moatshe</h2>
+                    <p>Founder, CEO</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="man.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Ndaba Ndlovu</h2>
+                    <p>Print and Exhibition Production Lead</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="man.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Shonisani Makhari</h2>
+                    <p>Communications & Media Relations Lead</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="man.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Vela Mzimela</h2>
+                    <p>Digital Strategy Lead</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="man.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Thutego Sebotsane</h2>
+                    <p>Stakeholder Relations </p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="man.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Blessing Ngakane</h2>
+                    <p>Creative & Design</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="woman2.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Bonolo Mushanganyisi</h2>
+                    <p>Account Management</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="woman2.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Sibusisiwe Khumalo</h2>
+                    <p>Legal</p>
+                </div>
+            </div>
+			 <div class="team-member">
+                <img src="woman2.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Dinah Modise</h2>
+                    <p>Finance Manager</p>
+                </div>
+            </div>
+			  <div class="team-member">
+                <img src="woman2.PNG" alt="Judiken Mokoginta">
+                <div class="info">
+                    <h2>Hilda Ndlovu</h2>
+                    <p>Events & Activations Lead</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+      <div class="contact-section">
+    <p>We would love to hear from you and collaborate on something that builds the world.</p>
+    <h1>Let's Talk <span>&#x2197;</span></h1>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="contact-info">
+                <p>Email:info@onbrandmarketing.co.za </p>
+                <p>Phone: 011 943 1522<br>
+083 429 7361<br>
+072 545 5855</p>
+            </div>
+            <div class="location-info">
+                <p>Location: <br>
+                    1 Jones Road, Kempton Park,
+ <br>
+                    Johannesburg, 1632 
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Works</a></li>
+                
+              
+                
+                <li><a href="#">Changelog</a></li>
+                
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+  
+            
+           
+    <script>
+	document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+
+    menuToggle.addEventListener('click', function() {
+        header.classList.toggle('menu-active');
+    });
+});
+	</script>
+
+    
+</body>
+</html>
